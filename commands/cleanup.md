@@ -399,17 +399,16 @@ If an item doesn't apply, write `n/a: <one-sentence reason>`. If it does, write 
  7. BY PLACEMENT  [`by` at end of line, never alone]
  8. FORMAT        [2-space indent; no empty lines inside; one tactic per line;
                    merge sequential `rw [a]; rw [b]` → `rw [a, b]`]
- 9. COMMENTS      [strip ALL narrative `--` inside the proof]
-10. DOCSTRING     [public theorem/def → 1-sentence; private/aux → none;
+ 9. DOCSTRING     [public theorem/def → 1-sentence; private/aux → none;
                    if missing on public, CREATE one — do not skip]
-11. VISIBILITY    [only-used-in-file → private; helper → private + _aux]
-12. STRUCTURE     [proof length, ∧ in statement, branches >10 lines]
-13. MATHLIB       [print the five-method search-status block — see Step 2.5 below]
-14. JUNK DEF      [n/a unless decl is a `def`; if so, has API? used >1 place? if not → inline]
-15. EXISTS LEMMA  [n/a unless private single-use ∃-lemma `:= ⟨_, rfl, …⟩` → inline]
-16. SHOW vs CHANGE [each `show T` in tactic mode: → `change`, drop, or leave (term-mode)]
-17. PUSH_NEG      [any remaining `push_neg`? → `push Not at h` (deprecated)]
-18. GENERALISE    [required: print the generalisation-status block — see Step 2.6 below.
+10. VISIBILITY    [only-used-in-file → private; helper → private + _aux]
+11. STRUCTURE     [proof length, ∧ in statement, branches >10 lines]
+12. MATHLIB       [print the five-method search-status block — see Step 2.5 below]
+13. JUNK DEF      [n/a unless decl is a `def`; if so, has API? used >1 place? if not → inline]
+14. EXISTS LEMMA  [n/a unless private single-use ∃-lemma `:= ⟨_, rfl, …⟩` → inline]
+15. SHOW vs CHANGE [each `show T` in tactic mode: → `change`, drop, or leave (term-mode)]
+16. PUSH_NEG      [any remaining `push_neg`? → `push Not at h` (deprecated)]
+17. GENERALISE    [required: print the generalisation-status block — see Step 2.6 below.
                    Run the mechanical-weakening pass on EVERY hypothesis. Big-change
                    candidates are flagged for Phase 5, not done here.]
 
